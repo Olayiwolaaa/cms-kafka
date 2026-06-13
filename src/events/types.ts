@@ -13,8 +13,9 @@ export type ArticleCreatedEvent = EventEnvelope<'ArticleCreated', {
 }>;
 
 export type ArticleUpdatedEvent = EventEnvelope<'ArticleUpdated', {
-    title?: string;
-    body?: string;
+    oldTitle?: string;
+    newTitle: string;
+    body: string;
 }>;
 
 export type CommentAddedEvent = EventEnvelope<'CommentAdded', {

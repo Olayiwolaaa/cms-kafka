@@ -17,12 +17,12 @@ export async function createArticle(
 
 export async function updateArticle(
     articleId: string,
-    title?: string,
-    body?: string
+    newTitle: string,
+    body: string
 ): Promise<void> {
     await publishArticleEvent(articleId, {
         eventType: 'ArticleUpdated',
-        payload: { title, body },
+        payload: { newTitle, body },
     });
 }
 
